@@ -1,44 +1,39 @@
-Mini-CRM — Pipeline commercial
+# Mini-CRM — Sales Pipeline
 
-Application de gestion de contacts et d'opportunités commerciales (deals),
-avec pipeline de vente et dashboard de suivi.
+A contact and sales opportunity (deal) management application, with a sales pipeline and a tracking dashboard.
 
-Installation
+## Installation
 
-```bash
 pip install -r requirements.txt
-```
 
-Lancer l'application
 
-```bash
+## Run the application
+
 streamlit run app.py
-```
 
-Une base de données SQLite (`crm.db`) est créée automatiquement au premier lancement,
-dans le même dossier. Les données sont sauvegardées en local.
 
-Fonctionnalités
+A SQLite database (`crm.db`) is created automatically on first launch, in the same folder. Data is saved locally.
 
-- **Contacts** : ajout, consultation, suppression de clients/prospects
-- **Deals** : création d'opportunités commerciales liées à un contact, avec valeur et étape
-  (Prospect → Qualification → Négociation → Gagné/Perdu)
-- **Dashboard** : valeur totale et active du pipeline, valeur gagnée, taux de conversion,
-  répartition des deals par étape
+## Features
 
-Structure
+* **Contacts**: add, view, and delete clients/prospects
+* **Deals**: create sales opportunities linked to a contact, with a value and a stage (Prospect → Qualification → Negotiation → Won/Lost)
+* **Dashboard**: total and active pipeline value, won value, conversion rate, and deal breakdown by stage
 
-```
+## Structure
+
 mini-crm/
-├── app.py              interface Streamlit (3 onglets)
-├── database.py          couche d'accès à la base SQLite (CRUD)
-├── crm_analysis.py       calculs et agrégations pour le dashboard
+├── app.py Streamlit interface (3 tabs)
+├── database.py SQLite data access layer (CRUD)
+├── crm_analysis.py calculations and aggregations for the dashboard
 ├── requirements.txt
-└── crm.db                créé automatiquement au premier lancement
-```
+└── crm.db created automatically on first launch
 
-Pour aller plus loin
-Developper par JOHNSON Kwueku Bentsi Jucal
-- Ajouter une date de clôture prévue par deal, avec relances automatiques
-- Export CSV du pipeline
-- Historique des changements d'étape (audit trail)
+
+## Possible next steps
+
+Developed by Johnson Kwueku Bentsi Jucal
+
+* Add an expected close date per deal, with automatic reminders
+* CSV export of the pipeline
+* Stage change history (audit trail)
